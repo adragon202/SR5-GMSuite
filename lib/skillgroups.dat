@@ -1,0 +1,123 @@
+{
+	"Acting":{
+		"name":"Acting",
+		"skills":[
+			"Con",
+			"Impersonation",
+			"Performance"
+		]
+	},
+	"Athletics":{
+		"name":"Athletics",
+		"skills":[
+			"Gymnastics",
+			"Running",
+			"Swimming"
+		]
+	},
+	"Biotech":{
+		"name":"Biotech",
+		"skills":[
+			"Cybertechnology",
+			"First Aid",
+			"Medicine"
+		]
+	},
+	"Close Combat":{
+		"name":"Close Combat",
+		"skills":[
+			"Blades",
+			"Clubs",
+			"Unarmed"
+		]
+	},
+	"Conjuring":{
+		"name":"Conjuring",
+		"skills":[
+			"Banishing",
+			"Binding",
+			"Summoning"
+		]
+	},
+	"Cracking":{
+		"name":"Cracking",
+		"skills":[
+			"Cybercombat",
+			"Electronic Warfare",
+			"Hacking"
+		]
+	},
+	"Electronics":{
+		"name":"Electronics",
+		"skills":[
+			"Computer",
+			"Hardware",
+			"Software"
+		]
+	},
+	"Enchanting":{
+		"name":"Enchanting",
+		"skills":[
+			"Alchemy",
+			"Artificing",
+			"Disenchanting"
+		]
+	},
+	"Firearms":{
+		"name":"Firearms",
+		"skills":[
+			"Automatics",
+			"Longarms",
+			"Pistols"
+		]
+	},
+	"Influence":{
+		"name":"Influence",
+		"skills":[
+			"Etiquette",
+			"Leadership",
+			"Negotiation"
+		]
+	},
+	"Engineering":{
+		"name":"Engineering",
+		"skills":[
+			"Aeronautics Mechanic",
+			"Automotive Mechanic",
+			"Industrial Mechanic",
+			"Nautical Mechanic"
+		]
+	},
+	"Outdoors":{
+		"name":"Outdoors",
+		"skills":[
+			"Navigation",
+			"Survival",
+			"Tracking"
+		]
+	},
+	"Sorcery":{
+		"name":"Sorcery",
+		"skills":[
+			"Counterspelling",
+			"Ritual Spellcasting",
+			"Spellcasting"
+		]
+	},
+	"Stealth":{
+		"name":"Stealth",
+		"skills":[
+			"Disguise",
+			"Palming",
+			"Sneaking"
+		]
+	},
+	"Tasking":{
+		"name":"Tasking",
+		"skills":[
+			"Compiling",
+			"Decompiling",
+			"Registering"
+		]
+	}
+}

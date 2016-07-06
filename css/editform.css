@@ -1,0 +1,23 @@
+
+/*====================================
+/*Edit Character Sheet*/
+/*====================================*/
+input.StatInput
+{
+	width:30px;
+}
+
+input.GearName
+{
+	width:50px;
+}
+
+input.GearText
+{
+	width:50px;
+}
+
+input.GearValue
+{
+	width:30px;
+}

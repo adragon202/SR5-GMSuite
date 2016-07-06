@@ -1,0 +1,72 @@
+
+/*====================================*/
+/*Condition Monitor*/
+/*====================================*/
+#TableTopRight
+{
+	width: 100%;
+}
+
+div.hitbox
+{
+	display: inline-block;
+}
+
+div.healthbox
+{
+	display: inline-block;
+	background: #CCC;
+	color: black;
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+	width: 35px;
+	height: 35px;
+	border-radius: 5px;
+	border: 1px solid black;
+	/*Disable highlighting*/
+	-webkit-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	cursor: pointer;
+}
+
+div.healthbox span
+{
+
+}
+
+div.healthbox#active
+{
+
+}
+
+div.healthbox#inactive
+{
+	background-color: black;
+}
+
+div.healthbox#overflow
+{
+	background-color: red;
+}
+
+div.healthbox span.healthboxX
+{/*
+	color: black;
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: left;*/
+}
+
+span.healthboxX#on
+{
+	visibility: visible;
+}
+
+span.healthboxX#off
+{
+	visibility: hidden;
+}

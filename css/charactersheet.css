@@ -1,0 +1,356 @@
+
+/*====================================*/
+/*Character Sheet*/
+/*====================================*/
+#TableCenter
+{
+	width: 60%;
+}
+
+div#CharacterSheet
+{
+	overflow:auto;
+	height:100%;
+}
+
+.visible
+{
+	visibility: visible;
+}
+
+.hidden
+{
+	visibility: hidden;
+	display:none;
+}
+
+td.visible
+{
+	visibility: visible;
+}
+
+td.hidden
+{
+	visibility: hidden;
+	display:none;
+}
+
+table.CharacterDetails
+{
+
+}
+
+table.CharacterDetails th
+{
+	text-align: right;
+}
+
+table.AttributeTable
+{
+	color: white;
+	background-color: black;
+	text-align:center;
+	border-collapse: collapse;
+}
+
+table.AttributeTable tr:nth-child(odd)
+{
+	color: #F4C300;
+	border-top: 3px solid #F4C300;
+	border-bottom: 3px solid #F4C300;
+}
+
+table.AttributeTable tr:nth-child(even)
+{
+	background-color: #444444;
+}
+
+table.AttributeTable td
+{
+	padding: 5px;
+}
+
+table.AttributeTable th
+{
+	padding: 5px;
+}
+
+div.WeaponsList
+{	
+	width:100%;
+}
+
+table.Weapon
+{
+	background-color: #444444;
+	border-collapse: collapse;
+	border-bottom: 2px solid black;
+}
+
+table.Weapon th
+{
+	text-align: left;
+	width: 100%;
+}
+
+table.WeaponStats
+{
+	color: white;
+	background-color: black;
+	text-align:center;
+	border-collapse: collapse;
+}
+
+table.WeaponStats tr:nth-child(odd)
+{
+	color: #F4C300;
+	border-top: 3px solid #F4C300;
+	border-bottom: 3px solid #F4C300;
+}
+
+table.WeaponStats tr:nth-child(even)
+{
+	background-color: #444444;
+}
+
+table.WeaponStats td
+{
+	padding: 5px;
+}
+
+table.WeaponStats th
+{
+	padding: 5px;
+}
+
+table.ListsTable td.List
+{
+	/*height: 200px;*/
+	max-height: 200px;
+	margin: 10px;
+}
+
+div.List
+{
+	overflow-y:auto;
+	max-height: 200px;
+	width:200px;
+}
+
+td.List#SkillListCell
+{
+	max-height: 400px;
+}
+
+div.List#SkillListDiv
+{
+	max-height: 400px;
+}
+
+td.List#ActiveGear
+{
+	width:100%;
+	height:150px;
+}
+
+td.List#ActiveGear div.List
+{
+	width:100%;
+}
+
+span.ListHeader
+{
+	text-align: left;
+	font-size: 20px;
+	font-weight: bold;
+
+}
+
+/*Armor List*/
+	div.ArmorList
+	{
+		width:200px;
+	}
+
+	table.Armor
+	{
+		background-color: #444444;
+		border-collapse: collapse;
+		border-bottom: 2px solid black;
+	}
+
+	table.Armor th
+	{
+		text-align: left;
+		width: 100%;
+	}
+/*Armor List*/
+
+/*Skill List*/
+	div.SkillList
+	{	
+
+	}
+
+	div.SkillList table:nth-of-type(even)
+	{
+		background-color: #666666;
+	}
+
+	table.Skill
+	{
+		background-color: #444444;
+		border-collapse: collapse;
+		border-bottom: 2px solid black;
+	}
+
+	table.Skill th
+	{
+		text-align: left;
+		width: 100%;
+	}
+/*Skill List*/
+
+/*SkillGroups List*/
+	div.SkillGroups
+	{	
+	}
+
+	div.SkillGroups table:nth-of-type(even)
+	{
+		background-color: #666666;
+	}
+
+	table.SkillGroup
+	{
+		background-color: #444444;
+		border-collapse: collapse;
+		border-bottom: 2px solid black;
+	}
+
+	table.SkillGroup th
+	{
+		text-align: left;
+		width: 100%;
+	}
+/*SkillGroups List*/
+
+/*Gear List*/
+	div.GearList
+	{	
+	}
+
+	div.GearList table:nth-of-type(even)
+	{
+		background-color: #666666;
+	}
+
+	table.Gear
+	{
+		background-color: #444444;
+		border-collapse: collapse;
+		border-bottom: 2px solid black;
+	}
+
+	table.Gear th
+	{
+		text-align: left;
+		width: 100%;
+	}
+/*Gear List*/
+
+/*Augmentations List*/
+	div.AugmentationsList
+	{	
+	}
+
+	div.AugmentationsList table:nth-of-type(even)
+	{
+		background-color: #666666;
+	}
+
+	table.Augmentation
+	{
+		background-color: #444444;
+		border-collapse: collapse;
+		border-bottom: 2px solid black;
+	}
+
+	table.Augmentation th
+	{
+		text-align: left;
+		width: 100%;
+	}
+/*Augmentations List*/
+
+/*Qualities List*/
+	div.QualitiesList
+	{	
+	}
+
+	div.QualitiesList table:nth-of-type(even)
+	{
+		background-color: #666666;
+	}
+
+	table.Quality
+	{
+		background-color: #444444;
+		border-collapse: collapse;
+		border-bottom: 2px solid black;
+	}
+
+	table.Quality th
+	{
+		text-align: left;
+		width: 100%;
+	}
+/*Qualities List*/
+
+/*Powers List*/
+	div.PowersList
+	{	
+	}
+
+	div.PowersList table:nth-of-type(even)
+	{
+		background-color: #666666;
+	}
+
+	table.Power
+	{
+		background-color: #444444;
+		border-collapse: collapse;
+		border-bottom: 2px solid black;
+	}
+
+	table.Power th
+	{
+		text-align: left;
+		width: 100%;
+	}
+/*Powers List*/
+
+/*Spells List*/
+	div.SpellsList
+	{	
+	}
+
+	div.SpellsList table:nth-of-type(even)
+	{
+		background-color: #666666;
+	}
+
+	table.Spell
+	{
+		background-color: #444444;
+		border-collapse: collapse;
+		border-bottom: 2px solid black;
+	}
+
+	table.Spell th
+	{
+		text-align: left;
+		width: 100%;
+	}
+/*Spells List*/

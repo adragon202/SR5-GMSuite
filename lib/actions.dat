@@ -1,0 +1,1198 @@
+{
+	"Cast Spell": {
+		"attributes": [
+			"Magic"
+		],
+		"skills": [
+			"Spellcasting"
+		],
+		"size": 0,
+		"limit": "Force",
+		"limit_prompt": true,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Defense Roll": {
+		"attributes": [
+			"Reaction",
+			"Intuition"
+		],
+		"skills": [],
+		"size": 0,
+		"limit": "",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "",
+		"opposed_limit_prompt": "on",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": false,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"First Aid": {
+		"attributes": [
+			"Logic"
+		],
+		"skills": [
+			"First Aid"
+		],
+		"size": 0,
+		"limit": "Mental",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 2,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": true,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Damage Resist": {
+		"attributes": [
+			"Body"
+		],
+		"skills": [],
+		"size": 0,
+		"limit": "",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": false,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Sprint": {
+		"attributes": [
+			"Strength"
+		],
+		"skills": [
+			"Running"
+		],
+		"size": 0,
+		"limit": "Physical",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Throw Weapon": {
+		"attributes": [
+			"Agility"
+		],
+		"skills": [
+			"Throwing Weapon"
+		],
+		"size": 0,
+		"limit": "Physical",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Summon Spirit": {
+		"attributes": [
+			"Magic"
+		],
+		"skills": [
+			"Summoning"
+		],
+		"size": 0,
+		"limit": "Force",
+		"limit_prompt": true,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Bind Spirit": {
+		"attributes": [
+			"Magic"
+		],
+		"skills": [
+			"Binding"
+		],
+		"size": 0,
+		"limit": "Force",
+		"limit_prompt": true,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Banish Spirit": {
+		"attributes": [
+			"Magic"
+		],
+		"skills": [
+			"Banishing"
+		],
+		"size": 0,
+		"limit": "Astral",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Assense": {
+		"attributes": [
+			"Intuition"
+		],
+		"skills": [
+			"Assensing"
+		],
+		"size": 0,
+		"limit": "Astral",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Spot Preparation": {
+		"attributes": [
+			"Intuition"
+		],
+		"skills": [
+			"Arcane"
+		],
+		"size": 0,
+		"limit": "Mental",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Read Astral Signature": {
+		"attributes": [
+			"Magic"
+		],
+		"skills": [
+			"Assensing"
+		],
+		"size": 0,
+		"limit": "Astral",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 3,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": true,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Astral Tracking": {
+		"attributes": [
+			"Intuition"
+		],
+		"skills": [
+			"Assensing"
+		],
+		"size": 0,
+		"limit": "Astral",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 5,
+		"interval": 1,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": true,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Astral Combat": {
+		"attributes": [
+			"Willpower"
+		],
+		"skills": [
+			"Astral Combat"
+		],
+		"size": 0,
+		"limit": "Astral or Accuracy",
+		"limit_prompt": true,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Press Through Barrier": {
+		"attributes": [
+			"Charisma",
+			"Magic"
+		],
+		"skills": [],
+		"size": 0,
+		"limit": "Astral",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Notice Astral": {
+		"attributes": [
+			"Intuition"
+		],
+		"skills": [
+			"Perception"
+		],
+		"size": 0,
+		"limit": "Mental",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 4,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": true,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Resist Drain": {
+		"attributes": [
+			"Willpower",
+			"Drain"
+		],
+		"skills": [],
+		"size": 0,
+		"limit": "",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": false,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Negotiate": {
+		"attributes": [
+			"Charisma"
+		],
+		"skills": [
+			"Negotiation"
+		],
+		"size": 0,
+		"limit": "Social",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Format Device": {
+		"attributes": [
+			"Logic"
+		],
+		"skills": [
+			"Computer"
+		],
+		"size": 0,
+		"limit": "Sleaze",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Reboot Device": {
+		"attributes": [
+			"Logic"
+		],
+		"skills": [
+			"Computer"
+		],
+		"size": 0,
+		"limit": "Data Processing",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Spoof Command": {
+		"attributes": [
+			"Intuition"
+		],
+		"skills": [
+			"Hacking"
+		],
+		"size": 0,
+		"limit": "Sleaze",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Crack File": {
+		"attributes": [
+			"Logic"
+		],
+		"skills": [
+			"Hacking"
+		],
+		"size": 0,
+		"limit": "Attack",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Disarm Data Bomb": {
+		"attributes": [
+			"Intuition"
+		],
+		"skills": [
+			"Software"
+		],
+		"size": 0,
+		"limit": "Firewall",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Edit File": {
+		"attributes": [
+			"Logic"
+		],
+		"skills": [
+			"Computer"
+		],
+		"size": 0,
+		"limit": "Data Processing",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Set Data Bomb": {
+		"attributes": [
+			"Logic"
+		],
+		"skills": [
+			"Software"
+		],
+		"size": 0,
+		"limit": "Sleaze",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Matrix Perception": {
+		"attributes": [
+			"Intuition"
+		],
+		"skills": [
+			"Computer"
+		],
+		"size": 0,
+		"limit": "Data Processing",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Snoop": {
+		"attributes": [
+			"Intuition"
+		],
+		"skills": [
+			"Electronic Warfare"
+		],
+		"size": 0,
+		"limit": "Sleaze",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Trace Icon": {
+		"attributes": [
+			"Intuition"
+		],
+		"skills": [
+			"Computer"
+		],
+		"size": 0,
+		"limit": "Data Processing",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Brute Force": {
+		"attributes": [
+			"Logic"
+		],
+		"skills": [
+			"Cybercombat"
+		],
+		"size": 0,
+		"limit": "Attack",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Erase Mark": {
+		"attributes": [
+			"Logic"
+		],
+		"skills": [
+			"Computer"
+		],
+		"size": 0,
+		"limit": "Attack",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Hack on the Fly": {
+		"attributes": [
+			"Logic"
+		],
+		"skills": [
+			"Hacking"
+		],
+		"size": 0,
+		"limit": "Sleaze",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Data Spike": {
+		"attributes": [
+			"Logic"
+		],
+		"skills": [
+			"Cybercombat"
+		],
+		"size": 0,
+		"limit": "Attack",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Hide": {
+		"attributes": [
+			"Intuition"
+		],
+		"skills": [
+			"Electronic Warfare"
+		],
+		"size": 0,
+		"limit": "Sleaze",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Jam Signals": {
+		"attributes": [
+			"Logic"
+		],
+		"skills": [
+			"Electronic Warfare"
+		],
+		"size": 0,
+		"limit": "Attack",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Jump Into Rigged Device": {
+		"attributes": [
+			"Logic"
+		],
+		"skills": [
+			"Electronic Warfare"
+		],
+		"size": 0,
+		"limit": "Data Processing",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Resist Cyber Damage": {
+		"attributes": [
+			"Device Rating",
+			"Firewall"
+		],
+		"skills": [],
+		"size": 0,
+		"limit": "",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": false,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Resist Biofeedback": {
+		"attributes": [
+			"Willpower",
+			"Firewall"
+		],
+		"skills": [],
+		"size": 0,
+		"limit": "",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": false,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Repair Formatted": {
+		"attributes": [
+			"Logic"
+		],
+		"skills": [
+			"Software"
+		],
+		"size": 0,
+		"limit": "Mental",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 12,
+		"interval": 1,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": true,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": true,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Register Sprite": {
+		"attributes": [
+			"Resonance"
+		],
+		"skills": [
+			"Compiling"
+		],
+		"size": 0,
+		"limit": "Level",
+		"limit_prompt": true,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Thread Complex Form": {
+		"attributes": [
+			"Resonance"
+		],
+		"skills": [
+			"Software"
+		],
+		"size": 0,
+		"limit": "Level",
+		"limit_prompt": true,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Compile Sprite": {
+		"attributes": [
+			"Resonance"
+		],
+		"skills": [
+			"Compiling"
+		],
+		"size": 0,
+		"limit": "Level",
+		"limit_prompt": true,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Decompile Sprite": {
+		"attributes": [
+			"Resonance"
+		],
+		"skills": [
+			"Decompiling"
+		],
+		"size": 0,
+		"limit": "Level",
+		"limit_prompt": true,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": true,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	},
+	"Resist Fading": {
+		"attributes": [
+			"Willpower",
+			"Resonance"
+		],
+		"skills": [],
+		"size": 0,
+		"limit": "",
+		"limit_prompt": false,
+		"limit_fixed": 0,
+		"threshold": 0,
+		"interval": 0,
+		"opposed_attributes": [],
+		"opposed_skills": [],
+		"opposed_size_fixed": 0,
+		"opposed_limit": "0",
+		"opposed_limit_prompt": "",
+		"opposed_limit_fixed": 0,
+		"has_interval": false,
+		"has_fixed": false,
+		"has_limit": false,
+		"has_limit_fixed": false,
+		"has_threshold": false,
+		"has_opposed": false,
+		"has_opposed_fixed": false,
+		"has_opposed_limit_fixed": false
+	}
+}

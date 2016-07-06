@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SR5 Combat Manager</title>
+		<link rel="stylesheet" type="text/css" href="css/actionform.css" />
+		<link rel="stylesheet" type="text/css" href="css/actionlist.css" />
+		<link rel="stylesheet" type="text/css" href="css/basestyle.css" />
+		<link rel="stylesheet" type="text/css" href="css/charactersheet.css" />
+		<link rel="stylesheet" type="text/css" href="css/conditionmonitor.css" />
+		<link rel="stylesheet" type="text/css" href="css/editform.css" />
+		<link rel="stylesheet" type="text/css" href="css/initiativelist.css" />
+		<link rel="stylesheet" type="text/css" href="css/leftcolumn.css" />
+		<link rel="stylesheet" type="text/css" href="css/rightcolumn.css" />
+		<link rel="icon" type="image/png" href="resources/icon.png" />
+	</head>
+	<body>
+
+	<table id="PageContent" align="center"><tbody>
+	<tr>
+		<td colspan="3">
+			<div id="PageHeader">
+				<!-- Management Options -->
+				<input type="file" id="GetFile" accept=".sr5char" style="visibility:hidden;display:none;">
+				<input type="file" id="GetSessFile" accept=".sr5sess" style="visibility:hidden;display:none;">
+				<input type="file" id="NewFile" nwsaveas="newchar.sr5char" style="visibility:hidden;display:none;">
+				<input type="file" id="NewSessFile" nwsaveas="newsess.sr5sess" style="visibility:hidden;display:none;">
+				<button type="button" onclick="NewCharacter();">New Character</button>
+				<button type="button" id="EditCharacterButton" onclick="editCharacter()">Edit Character</button>
+				<button type="button" id="UpdateCharacterButton" onclick="updateCharacter()">Update Character</button>
+				<button type="button" onclick="saveCharacter()">Save Character</button>
+				<button type="button" onclick="loadCharacter()">Load Character</button>
+				<button type="button" onclick="saveSession()">Save Session</button>
+				<button type="button" onclick="loadSession()">Load Session</button>
+				<button type="button" onclick="startInitiative()">Roll Initiative</button>
+				<button type="button" onclick="nextInitiativePass()">Next Pass</button>
+				<!-- End of PageHeader -->
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td id="TableLeftSide">
+			<!-- Initiative Listed Characters-->
+			<div id="InitiativeList">
+				<table class="CharacterInitiative" id="1" onclick="ChangeActive(1)"><tbody>
+					<tr>
+						<th>
+							(Player 1) Character
+						</th>
+						<td class="Initiative">
+							15
+						</td>
+					</tr>
+					<tr>
+						<td>
+							P:0/10 (0/3) S:0/10
+						</td>
+					</tr>
+				</tbody></table>
+				<table class="CharacterInitiative" id="active" onclick="ChangeActive(3)"><tbody>
+					<tr>
+						<th>
+							(Player 3) Character
+						</th>
+						<td class="Initiative">
+							12
+						</td>
+					</tr>
+					<tr>
+						<td>
+							P:4/10 (0/3) S:9/10
+						</td>
+					</tr>
+				</tbody></table>
+				<table class="CharacterInitiative" id="4" onclick="ChangeActive(4)"><tbody>
+					<tr>
+						<th>
+							(GM) NPC 1
+						</th>
+						<td class="Initiative">
+							12
+						</td>
+					</tr>
+					<tr>
+						<td>
+							P:0/10 (0/3) S:0/10
+						</td>
+					</tr>
+				</tbody></table>
+				<table class="CharacterInitiative" id="2" onclick="ChangeActive(5)"><tbody>
+					<tr>
+						<th>
+							(Player 2) Character
+						</th>
+						<td class="Initiative">
+							9
+						</td>
+					</tr>
+					<tr>
+						<td>
+							P:0/10 (0/3) S:3/10
+						</td>
+					</tr>
+				</tbody></table>
+				<!-- End of InitiativeList -->
+			</div>
+			<!-- End of TableLeftSide -->
+		</td>
+		<td id="TableCenter">
+			<!-- Character Sheet -->
+			<div id="CharacterSheet">
+				<table><tbody><tr>
+				<td>
+					<table class="CharacterDetails"><tbody>
+						<tr>
+							<th>Name:</th><td id="Name">Character</td>
+							<th>Metatype:</th><td id="Metatype">Human</td>
+						</tr>
+						<tr>
+							<th>Player:</th><td id="Player">Player 3</td>
+							<th class="hidden" id="SpecialResistAttributeName">Drain:</th>
+							<td><div class="hidden" id="SpecialResistAttribute">Charisma</div>
+								<select class="hidden" id="SpecialEditResistAttribute">
+									<option value="intuition">Intuition</option>
+									<option value="logic">Logic</option>
+									<option value="charisma">Charisma</option>
+								</select>
+							</td>
+						</tr>
+						<!-- End of CharacterDetails -->
+					</tbody></table>
+					<table class="AttributeTable" id="Attributes"><tbody>
+						<tr>
+							<th>B</th><th>A</th><th>R</th><th>S</th>
+							<th>W</th><th>I</th><th>L</th><th>C</th>
+							<th>Ess</th>
+							<th class="hidden" id="AttributeSpecialLabel">Mag</th>
+							<th>Edg</th>
+						</tr>
+						<tr>
+							<td id="AttributeBody">3/6</td>
+							<td id="AttributeAgility">1/6</td>
+							<td id="AttributeReaction">1/6</td>
+							<td id="AttributeStrength">1/6</td>
+							<td id="AttributeWillpower">3/6</td>
+							<td id="AttributeIntuition">1/6</td>
+							<td id="AttributeLogic">1/6</td>
+							<td id="AttributeCharisma">1/6</td>
+							<td id="AttributeEssence">6.0</td>
+							<td class="hidden" id="AttributeSpecial">6/6</td>
+							<td id="AttributeEdge">2/7</td>
+						</tr>
+						<!-- End of AttributeTable -->
+					</tbody></table>
+					<table class="AttributeTable" id="Limits"><tbody>
+						<tr>
+							<th>Physical</th><th>Mental</th><th>Social</th>
+							<th>Walking</th><th>Running</th>
+						</tr>
+						<tr>
+							<td><div id="LimitPhysical">2</div></td>
+							<td><div id="LimitMental">2</div></td>
+							<td><div id="LimitSocial">4</div></td>
+							<td><div id="LimitWalking">2</div></td>
+							<td><div id="LimitRunning">4</div></td>
+						</tr>
+						<!-- End of LimitTable -->
+					</tbody></table>
+					<select id="SpecialEditType" onchange="setCharacterSpecial()">
+						<option value="mundane">Mundane</option>
+						<option value="magician">Magician</option>
+						<option value="aspectedmagician">Aspected Magician</option>
+						<option value="mysticadept">Mystic Adept</option>
+						<option value="adept">Adept</option>
+						<option value="technomancer">Technomancer</option>
+					</select>
+				</td>
+				<td class="List" id="ActiveGear">
+					<div class="List">
+						<span class="ListHeader">Armor</span><button type="button" id="AddArmorButton" onclick="actchar.addArmor()">+</button>
+						<div id="ArmorList">
+							<table class="Weapon" id="LinedCoat" onclick="expand(LinedCoat)"><tbody>
+								<tr>
+									<th>Lined Coat</th><td>Armor:9</td>
+								</tr>
+								<tr class="dropdownhidden" id="LinedCoatdropdown">
+									<td colspan="2">
+										Chemical Protection R3</br>
+										Fire Resistance R3</br>
+										NonConductivity R6
+									</td>
+								</tr>
+							</tbody></table>
+							<!-- End of ArmorList -->
+						</div>
+						<span class="ListHeader">Weapons</span><button type="button" id="AddWeaponsButton" onclick="actchar.addWeapon()">+</button>
+						<div id="WeaponsList">
+							<table class="Weapon" id="AresPredatorV" onclick="expand(AresPredatorV)"><tbody>
+								<tr>
+									<th>Ares Predator V</th><td>Heavy Pistol</td>
+								</tr>
+								<tr class="dropdownhidden" id="AresPredatorVdropdown">
+									<td colspan="2">
+										<table class="WeaponStats"><tbody>
+											<tr>
+												<th>ACC</th><th>DV</th><th>AP</th><th>MODE</th><th>RC</th>
+												<th>AMMO</th><th>AVAIL</th><th>COST</th><th>SOURCE</th>
+											</tr>
+											<tr>
+												<td>5(7)</td><td>8P</td><td>-1</td><td>SA</td><td>-</td>
+												<td>15(c)</td><td>5R</td><td>725&yen;</td><td>Core</td>
+											</tr>
+										</tbody></table>
+									</td>
+								</tr>
+							</tbody></table>
+							<table class="Weapon" id="StunBaton" onclick="expand(StunBaton)"><tbody>
+								<tr>
+									<th>Stun Baton</th><td>Club</td>
+								</tr>
+								<tr class="dropdownhidden" id="StunBatondropdown">
+									<td colspan="2">
+										<table class="WeaponStats"><tbody>
+											<tr>
+												<th>ACC</th><th>REACH</th><th>DV</th><th>AP</th>
+												<th>AVAIL</th><th>COST</th><th>SOURCE</th>
+											</tr>
+											<tr>
+												<td>4</td><td>1</td><td>9S(e)</td><td>-5</td>
+												<td>6R</td><td>750&yen;</td><td>Core</td>
+											</tr>
+										</tbody></table>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+							<span class=ListHeader>Spells</span><button type="button" id="AddSpellsButton" onclick="actchar.addSpell()">+</button>
+							<div id="SpellsComplexFormsList">
+							</div>
+					</div>
+				</td>
+				</tr></tbody></table>
+				<table class="ListsTable"><tbody>
+					<tr class="List">
+						<td rowspan="2" class="List" id="SkillListCell">
+							<span class="ListHeader">Skills</span><button type="button" id="AddSkillsButton" onclick="actchar.addSkill()">+</button>
+							<div class="List" id="SkillListDiv">
+							<div class="SkillList" id="SkillList">
+								<!-- End of SkillTable -->
+							</div>
+							</div>
+						</td>
+						<td class="List">
+							<span class="ListHeader">Skill Groups</span><button type="button" id="AddSkillGroupsButton" onclick="actchar.addSkillGroup()">+</button>
+							<div class="List">
+							<div class="SkillGroups" id="SkillGroupList">
+								<!-- End of SkillGroups -->
+							</div>
+							</div>
+						</td>
+						<td class="List">
+							<span class="ListHeader">Gear</span><button type="button" id="AddGearButton" onclick="actchar.addGear()">+</button>
+							<div class="List">
+							<div id="GearList">
+								<!-- End of GearList -->
+							</div>
+							</div>
+						</td>
+						<td class="List">
+							<span class="ListHeader">Augmentations</span><button type="button" id="AddAugmentationsButton" onclick="actchar.addAugmentation()">+</button>
+							<div class="List">
+							<div id="AugmentationsList">
+							</div>
+							</div>
+						</td>
+					</tr>
+					<tr class="List">
+						<td class="List">
+							<span class="ListHeader">Qualities</span><button type="button" id="AddQualitiesButton" onclick="actchar.addQuality()">+</button>
+							<div class="List">
+							<div id="QualitiesList">
+							</div>
+							</div>
+						</td>
+						<td>
+							<div class="List">
+							<span class="ListHeader">Cyberdeck</span>
+							<div id="Cyberdeck">
+								<span id="CyberdeckName"></span>
+								<table id="CyberdeckStats"><tbody>
+									<tr>
+										<th>A</th>
+										<th>S</th>
+										<th>D</th>
+										<th>F</th>
+									</tr>
+									<tr>
+										<td><input type="radio" name="CyberdeckSelect0" value="attack" checked></td>
+										<td><input type="radio" name="CyberdeckSelect0" value="sleaze" ></td>
+										<td><input type="radio" name="CyberdeckSelect0" value="dataproc" ></td>
+										<td><input type="radio" name="CyberdeckSelect0" value="firewall" ></td>
+									</tr>
+									<tr>
+										<td><input type="radio" name="CyberdeckSelect1" value="attack"></td>
+										<td><input type="radio" name="CyberdeckSelect1" value="sleaze" checked></td>
+										<td><input type="radio" name="CyberdeckSelect1" value="dataproc"></td>
+										<td><input type="radio" name="CyberdeckSelect1" value="firewall"></td>
+									</tr>
+									<tr>
+										<td id="CyberdeckAttack" style="text-align:center;">1</td>
+										<td id="CyberdeckSleaze" style="text-align:center;">2</td>
+										<td id="CyberdeckDataProc" style="text-align:center;">3</td>
+										<td id="CyberdeckFirewall" style="text-align:center;">4</td>
+									</tr>
+									<tr>
+										<td colspan="4">
+											<center>
+											<button type="button" onclick="actchar.Cyberdeck.swapStats()">SWAP</button>
+											<div id="CyberdeckDamage"></div>
+											</center>
+										</td>
+									</tr>
+								</tbody></table>
+							</div>
+							</div>
+						</td>
+						<td>
+							<span class=ListHeader>Powers</span><button type="button" id="AddPowersButton" onclick="actchar.addPower()">+</button>
+							<div class=List>
+							<div id="PowersList">
+							</div>
+							</div>
+						</td>
+					</tr>
+				</tbody></table>
+				<!-- End of CharacterSheet -->
+			</div>
+			<!-- End of TableCenter -->
+		</td>
+		<td id="TableRightSide">
+			<table id="TableTopRight"><tbody>
+				<!-- Condition Monitor -->
+				<div id="ConditionMonitor">
+					<tr>
+						<td><b align="center">Condition Monitor</td>
+					</tr>
+					<tr>
+						<td>
+							<table id="ConditionMonitorPhysical"><tbody>
+								<tr><td>
+									Physical
+								</td></tr>
+								<tr><td>
+									<div class="hitbox" id="physical1"  onclick="actchar.ConMon.changePhysical(1)">
+										<div class="healthbox" id="active"><span class="healthboxX" id="on">X</span></div>
+									</div>
+									<div class="hitbox" id="physical2"  onclick="actchar.ConMon.changePhysical(2)">
+										<div class="healthbox" id="active"><span class="healthboxX" id="on">X</span></div>
+									</div>
+									<div class="hitbox" id="physical3"  onclick="actchar.ConMon.changePhysical(3)">
+										<div class="healthbox" id="active"><span class="healthboxX" id="on">X</span></div>
+									</div>
+								</td></tr>
+								<tr><td>
+									<div class="hitbox" id="physical4"  onclick="actchar.ConMon.changePhysical(4)">
+										<div class="healthbox" id="active"><span class="healthboxX" id="on">X</span></div>
+									</div>
+									<div class="hitbox" id="physical5"  onclick="actchar.ConMon.changePhysical(5)">
+										<div class="healthbox" id="active"><span class="healthboxX" id="off">X</span></div>
+									</div>
+									<div class="hitbox" id="physical6"  onclick="actchar.ConMon.changePhysical(6)">
+										<div class="healthbox" id="active"><span class="healthboxX" id="off">X</span></div>
+									</div>
+								</td></tr>
+								<tr><td>
+									<div class="hitbox" id="physical7"  onclick="actchar.ConMon.changePhysical(7)">
+										<div class="healthbox" id="active"><span class="healthboxX" id="off">X</span></div>
+									</div>
+									<div class="hitbox" id="physical8"  onclick="actchar.ConMon.changePhysical(8)">
+										<div class="healthbox" id="active"><span class="healthboxX" id="off">X</span></div>
+									</div>
+									<div class="hitbox" id="physical9"  onclick="actchar.ConMon.changePhysical(9)">
+										<div class="healthbox" id="active"><span class="healthboxX" id="off">X</span></div>
+									</div>
+								</td></tr>
+								<tr><td>
+									<div class="hitbox" id="physical10"  onclick="actchar.ConMon.changePhysical(10)">
+										<div class="healthbox" id="active"><span class="healthboxX" id="off">X</span></div>
+									</div>
+									<div class="hitbox" id="physical11"  onclick="actchar.ConMon.changePhysical(11)">
+										<div class="healthbox" id="overflow"><span class="healthboxX" id="off">X</span></div>
+									</div>
+									<div class="hitbox" id="physical12"  onclick="actchar.ConMon.changePhysical(12)">
+										<div class="healthbox" id="overflow"><span class="healthboxX" id="off">X</span></div>
+									</div>
+								</td></tr>
+								<tr><td>
+									<div class="hitbox" id="physical13"  onclick="actchar.ConMon.changePhysical(13)">
+										<div class="healthbox" id="overflow"><span class="healthboxX" id="off">X</span></div>
+									</div>
+									<div class="hitbox" id="physical14"  onclick="actchar.ConMon.changePhysical(14)">
+										<div class="healthbox" id="inactive"><span class="healthboxX" id="off">X</span></div>
+									</div>
+									<div class="hitbox" id="physical15"  onclick="actchar.ConMon.changePhysical(15)">
+										<div class="healthbox" id="inactive"><span class="healthboxX" id="off">X</span></div>
+									</div>
+								</td></tr>
+								<tr><td>
+									<div class="hitbox" id="physical16"  onclick="actchar.ConMon.changePhysical(16)">
+										<div class="healthbox" id="inactive"><span class="healthboxX" id="off">X</span></div>
+									</div>
+									<div class="hitbox" id="physical17"  onclick="actchar.ConMon.changePhysical(17)">
+										<div class="healthbox" id="inactive"><span class="healthboxX" id="off">X</span></div>
+									</div>
+									<div class="hitbox" id="physical18"  onclick="actchar.ConMon.changePhysical(18)">
+										<div class="healthbox" id="inactive"><span class="healthboxX" id="off">X</span></div>
+									</div>
+								</td></tr>
+								<!-- End of ConditionMonitorPhysical -->
+							</tbody></table>
+						</td>
+						<td>
+							<table id="ConditionMonitorStun"><tbody>
+								<tr><td>
+									Stun
+								</td></tr>
+								<tr><td>
+									<div class="hitbox" id="stun1"  onclick="actchar.ConMon.changeStun(1)">
+										<div class="healthbox" id="active"><span class="healthboxX" id="on">X</span></div>
+									</div>
+									<div class="hitbox" id="stun2"  onclick="actchar.ConMon.changeStun(2)">
+										<div class="healthbox" id="active"><span class="healthboxX" id="on">X</span></div>
+									</div>
+									<div class="hitbox" id="stun3"  onclick="actchar.ConMon.changeStun(3)">
+										<div class="healthbox" id="active"><span class="healthboxX" id="on">X</span></div>
+									</div>
+								</td></tr>
+								<tr><td>
+									<div class="hitbox" id="stun4"  onclick="actchar.ConMon.changeStun(4)">
+										<div class="healthbox" id="active"><span class="healthboxX" id="on">X</span></div>
+									</div>
+									<div class="hitbox" id="stun5"  onclick="actchar.ConMon.changeStun(5)">
+										<div class="healthbox" id="active"><span class="healthboxX" id="on">X</span></div>
+									</div>
+									<div class="hitbox" id="stun6"  onclick="actchar.ConMon.changeStun(6)">
+										<div class="healthbox" id="active"><span class="healthboxX" id="on">X</span></div>
+									</div>
+								</td></tr>
+								<tr><td>
+									<div class="hitbox" id="stun7"  onclick="actchar.ConMon.changeStun(7)">
+										<div class="healthbox" id="active"><span class="healthboxX" id="on">X</span></div>
+									</div>
+									<div class="hitbox" id="stun8"  onclick="actchar.ConMon.changeStun(8)">
+										<div class="healthbox" id="active"><span class="healthboxX" id="on">X</span></div>
+									</div>
+									<div class="hitbox" id="stun9"  onclick="actchar.ConMon.changeStun(9)">
+										<div class="healthbox" id="active"><span class="healthboxX" id="on">X</span></div>
+									</div>
+								</td></tr>
+								<tr><td>
+									<div class="hitbox" id="stun10"  onclick="actchar.ConMon.changeStun(10)">
+										<div class="healthbox" id="active"><span class="healthboxX" id="off">X</span></div>
+									</div>
+									<div class="hitbox" id="stun11"  onclick="actchar.ConMon.changeStun(11)">
+										<div class="healthbox" id="inactive"><span class="healthboxX" id="off">X</span></div>
+									</div>
+									<div class="hitbox" id="stun12"  onclick="actchar.ConMon.changeStun(12)">
+										<div class="healthbox" id="inactive"><span class="healthboxX" id="off">X</span></div>
+									</div>
+								</td></tr>
+								<!-- End of ConditionMonitorStun -->
+							</tbody></table>
+						</td>
+					</tr>
+					<tr>
+						<td>Initiative Mode</td>
+						<td id="InitiativeBase">Init = 6 + 1D6</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<input type="radio" name="initiativemode" id="InitiativeModephysical" value="physical" onclick="actchar.ConMon.changeMode('physical')">Physical
+							<input type="radio" name="initiativemode" id="InitiativeModematrixcold" value="matrixcold" onclick="actchar.ConMon.changeMode('matrixcold')">Matrix Cold<br>
+							<input type="radio" name="initiativemode" id="InitiativeModeastral" value="astral" onclick="actchar.ConMon.changeMode('astral')">Astral
+							<input type="radio" name="initiativemode" id="InitiativeModematrixhot" value="matrixhot" onclick="actchar.ConMon.changeMode('matrixhot')">Matrix Hot
+						</td>
+					</tr>
+					<!-- End of ConditionMonitor -->
+				</div>
+				<!-- End of TableTopRight -->
+			</tbody></table>
+			<table id="TableBottomRight"><tbody>
+				<!-- Actions -->
+				<tr>
+					<td><b align="center">Actions</b><button type="button" onclick="openActionForm()">+</button><button type="button" onclick="toggleActionsClean()">Clean</button></td>
+				</tr>
+				<tr class="List"><td class="List">
+					<div class="List">
+					<div id="ActionList">
+						<table id="CastSpell" class="Action"><tbody>
+							<tr>
+								<th>Cast Spell</th>
+								<td class="ActionRollButton"><button type="button">Roll</button></td>
+							</tr>
+							<tr>
+								<td colspan="2">Magic + Spellcasting[Force]</td>
+							</tr>
+							<tr>
+								<td>0[Force]</td>
+							</tr>
+						</tbody></table>
+						<!-- End of ActionList -->
+					</div>
+					</div>
+				</td></tr>
+				<!-- End of TableBottomRight -->
+			</tbody></table>
+			<!-- End of TableRightSide -->
+		</td>
+	</tr>
+	<tr>
+		<td colspan="3">
+		<div id="PageFooter">
+			<!-- Status Information -->
+			<button type="button" onclick="manualRoll()">Roll</button>
+			<button type="button" onclick="resetManualRoll()">Reset</button>
+			<label for="ManualDiceRollSize">Size:</label>
+			<input type="number" min="1" id="ManualDiceRollSize" value="1" style="width:35px"/>
+			<label for="ManualDiceRollLimit">Limit:</label>
+			<input type="number" min="0" id="ManualDiceRollLimit" value="0" style="width:35px"/>
+			<label for="ManualDiceRollThreshold">Threshold:</label>
+			<input type="number" min="0" id="ManualDiceRollThreshold" value="0" style="width:35px"/>
+			<label for="ManualDiceRollExtended">Extended:</label>
+			<input type="checkbox" min="0" id="ManualDiceRollExtended" value="unchecked"/>
+			<div id="ManualDiceRollResults"></div>
+		</div>
+		</td>
+	</tr>
+	</tbody></table>
+
+	<div id="NewActionForm" class="white_content">
+		<span>New Action Form</span>
+		<table><tbody>
+			<tr>
+				<td>
+					<label for="ActionFormName">Interval:</label>
+					<input type="text" id="ActionFormName" placeholder="Action Name">
+				</td>
+				<td>
+					<label for="ActionFormInterval">Interval:</label>
+					<input type="number" id="ActionFormInterval" value="0">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span>Attributes</span><button type="button" onclick="addActionAttribute()">+</button>
+					<div class="List" id="ActionFormAttributesList">
+					</div>
+				</td>
+				<td>
+					<span>Skills</span><button type="button" onclick="addActionSkill()">+</button>
+					<div class="List" id="ActionFormSkillsList">
+					</div>
+				</td>
+				<td>
+					<label for="ActionFormLimit" >Limit:</label>
+					<input type="list" list="limits" id="ActionFormLimit">
+					<input type="checkbox" id="ActionFormLimitPrompt">Prompt
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span>Fixed Pool</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="ActionFormFixedSize">DicePool:</label>
+					<input type="checkbox" id="ActionFormHasFixedSize">
+				</td>
+				<td>
+					<label for="ActionFormFixedLimit">Limit:</label>
+					<input type="checkbox" id="ActionFormHasFixedLimit">
+				</td>
+				<td>
+					<label for="ActionFormFixedThreshold">Threshold:</label>
+					<input type="checkbox" id="ActionFormHasFixedThreshold">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="number" id="ActionFormFixedSize">
+				</td>
+				<td>
+					<input type="number" id="ActionFormFixedLimit">
+				</td>
+				<td>
+					<input type="number" id="ActionFormFixedThreshold">
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<span>Opposed</span>
+					<input type="checkbox" id="ActionFormHasOpposed" onclick="expand(ActionFormOpposed)">
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<table id="ActionFormOpposed"><tbody  id="ActionFormOpposeddropdown" class="dropdownhidden">
+					<tr>
+						<td>
+							<span>Attributes</span><button type="button" onclick="addActionAttribute('opposed')">+</button>
+							<div class="List" id="ActionFormOpposedAttributesList">
+							</div>
+						</td>
+						<td>
+							<span>Skills</span><button type="button" onclick="addActionSkill('opposed')">+</button>
+							<div class="List" id="ActionFormOpposedSkillsList">
+							</div>
+						</td>
+						<td>
+							<label for="ActionFormOpposedLimit" >Limit:</label>
+							<input type="list" list="limits" id="ActionFormOpposedLimit">
+							<input type="checkbox" id="ActionFormOpposedLimitPrompt">Prompt
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span>Fixed Pool</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="ActionFormOpposedFixedSize">DicePool:</label>
+							<input type="checkbox" id="ActionFormOpposedHasFixedSize">
+						</td>
+						<td>
+							<label for="ActionFormOpposedFixedLimit">Limit:</label>
+							<input type="checkbox" id="ActionFormOpposedHasFixedLimit">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="number" id="ActionFormOpposedFixedSize">
+						</td>
+						<td>
+							<input type="number" id="ActionFormOpposedFixedLimit">
+						</td>
+					</tr>
+				</tbody></table>
+			</tr>
+		</tbody></table>
+		<button type="button" onclick="addAction()">Submit</button>
+		<button type="button" onclick="closeActionForm()">Cancel</button>
+	</div>
+	<div id="fade" class="black_overlay" onclick="closeActionForm()"></div>
+
+	<div id="backupconsole"></div>
+
+	<!-- Data Lists -->
+	<datalist id="moddables">
+		<option value="Agility">
+		<option value="Body">
+		<option value="Charisma">
+		<option value="Edge">
+		<option value="Initiative Dice">
+		<option value="Initiative">
+		<option value="Intuition">
+		<option value="Logic">
+		<option value="Magic">
+		<option value="Reaction">
+		<option value="Resonance">
+		<option value="Special">
+		<option value="Strength">
+		<option value="Willpower">
+	</datalist>
+	<datalist id="attributes">
+		<option value="Agility">
+		<option value="Body">
+		<option value="Charisma">
+		<option value="Edge">
+		<option value="Intuition">
+		<option value="Logic">
+		<option value="Magic">
+		<option value="Reaction">
+		<option value="Resonance">
+		<option value="Strength">
+		<option value="Willpower">
+		<option value="Drain">
+		<option value="Fade">
+		<option value="Attack">
+		<option value="Sleaze">
+		<option value="Data Processing">
+		<option value="Firewall">
+		<option value="Device Rating">
+	</datalist>
+	<datalist id="limits">
+		<option value="Physical">
+		<option value="Mental">
+		<option value="Social">
+		<option value="Astral">
+		<option value="Attack">
+		<option value="Sleaze">
+		<option value="Data Processing">
+		<option value="Firewall">
+		<option value="Device Rating">
+	</datalist>
+	<datalist id="skills">
+	</datalist>
+	<datalist id="skillgroups">
+	</datalist>
+
+	<!-- Run Scripts -->
+	<!-- External Scripts -->
+	<script src="js/external/jquery-3.0.0.min.js"></script>
+	<!-- Project Specific Scripts -->
+		<!-- Classes -->
+			<script src="js/classes/class.Armor.js"></script>
+			<script src="js/classes/class.Attributes.js"></script>
+			<script src="js/classes/class.Augmentation.js"></script>
+			<script src="js/classes/class.ConditionMonitor.js"></script>
+			<script src="js/classes/class.Cyberdeck.js"></script>
+			<script src="js/classes/class.DicePool.js"></script>
+			<script src="js/classes/class.Gear.js"></script>
+			<script src="js/classes/class.Limits.js"></script>
+			<script src="js/classes/class.Power.js"></script>
+			<script src="js/classes/class.Quality.js"></script>
+			<script src="js/classes/class.Skill.js"></script>
+			<script src="js/classes/class.SkillGroup.js"></script>
+			<script src="js/classes/class.Spell.js"></script>
+			<script src="js/classes/class.Weapon.js"></script>
+			<!-- Character Sheet -->
+			<script src="js/classes/class.Character.js"></script>
+		<!-- Functions -->
+			<script src="js/functions/actions.js"></script>
+			<script src="js/functions/buttons.js"></script>
+			<script src="js/functions/edit.js"></script>
+			<script src="js/functions/initiativelist.js"></script>
+			<script src="js/functions/interactive.js"></script>
+			<script src="js/functions/modifiers.js"></script>
+			<script src="js/functions/other.js"></script>
+		<!-- Main -->
+			<script src="js/main.js"></script>
+
+	</body>
+</html>
