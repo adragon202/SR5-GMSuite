@@ -127,12 +127,12 @@ function Quality(intOwnerID, strName, intRating, strArrNotes, strSource, strArrA
 	this.drawEdit	= function(intId){
 		var tmpstr = "";
 			tmpstr	= "<table class=\"Quality\" id=\"Quality" + intId + "Edit\"><tbody><tr>";
-			tmpstr	+=		"<th class=\"QualityName\" onclick=\"expand(Quality" + intId + "Edit)\"><input type=\"text\" id=\"Quality" + intId + "EditName\" value=\"" + this.name + "\"></th>";
+			tmpstr	+=		"<th class=\"QualityName\" onclick=\"expand(Quality" + intId + "Edit)\"><input type=\"text\" id=\"Quality" + intId + "EditName\" value=\"" + this.name + "\" placeholder=\"Name\"></th>";
 			tmpstr	+=		"<td class=\"QualityRating\" onclick=\"expand(Quality" + intId + "Edit)\"><input type=\"number\" id=\"Quality" + intId + "EditRating\" value=\"" + this.rating + "\"></td>";
 			//Drop Down Section
 			tmpstr	+=	"</tr><tr class=\"dropdownhidden\" id=\"Quality" + intId + "Editdropdown\"><td colspan=\"2\">";
-			tmpstr	+=		"Source: <input type=\"text\" id=\"Quality" + intId + "EditSource\" value=\"" + this.source + "\"></br>";
-			tmpstr	+=		"<textarea cols=\"20\" rows=\"4\" id=\"Quality" + intId + "EditNotes\">";
+			tmpstr	+=		"Source: <input type=\"text\" id=\"Quality" + intId + "EditSource\" value=\"" + this.source + "\" placeholder=\"Source\"></br>";
+			tmpstr	+=		"<textarea cols=\"20\" rows=\"4\" id=\"Quality" + intId + "EditNotes\" placeholder=\"Notes\">";
 			for (var i = 0; i < this.notes.length; i++) {
 				tmpstr	+=	this.notes[i];
 				tmpstr	+=	(i != (this.notes.length - 1)) ? "\n" : "";
@@ -190,6 +190,8 @@ function Quality(intOwnerID, strName, intRating, strArrNotes, strSource, strArrA
 		this.source	= document.getElementById("Quality" + intId + "EditSource").value;
 		//Stat Modifiers
 		var tmpelem = document.getElementsByClassName("Quality" + intId + "EditAppliedMods" + "ModSlot");
+		this.attributemods	= [];
+		this.skillmods		= [];
 		for (var i = 0; i < tmpelem.length; i++) {
 			var tmparr = {};
 			tmparr["name"] = document.getElementById("Quality" + intId + "EditAppliedMods" + i + "Name").value;

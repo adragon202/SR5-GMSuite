@@ -430,6 +430,7 @@ function ConditionMonitor(intOwnerID, objAttributes, intInitiative)
 		this.Wounds = Math.floor(this.Physical / 3) + Math.floor(this.Stun / 3);
 		//Every extra wound reduces initiative
 		if (oldWounds < this.Wounds) this.reduceInitiative(this.Wounds - oldWounds);
+		redrawActionList();
 		return;
 	}//end ConditionMonitor::calc_Wounds()
 

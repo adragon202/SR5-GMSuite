@@ -140,21 +140,21 @@ function Augmentation(intOwnerID, strName, intEssence, intCapacity, strArrNotes,
 	this.drawEdit	= function(intId){
 		var tmpstr = "";
 			tmpstr	+=	"<table class=\"Augmentation\" id=\"Augmentation" + intId + "Edit\"><tbody><tr>";
-			tmpstr	+=	"<th class=\"AugmentationName\" onclick=\"expand(Augmentation" + intId + "Edit)\" colspan=\"2\"><input type=\"text\" id=\"Augmentation" + intId + "EditName\" value=\"" + this.name + "\"></th>";
+			tmpstr	+=	"<th class=\"AugmentationName\" onclick=\"expand(Augmentation" + intId + "Edit)\" colspan=\"2\"><input type=\"text\" id=\"Augmentation" + intId + "EditName\" value=\"" + this.name + "\" placeholder=\"Name\"></th>";
 			tmpstr	+=	"</tr><tr>"
-			tmpstr	+=		"<td class=\"AugmentationEssence\" onclick=\"expand(Augmentation" + intId + "Edit)\"><input type=\"number\" id=\"Augmentation" + intId + "EditEssence\" value=\"" + this.essence + "\"></td>";
-			tmpstr	+=		"<td class=\"AugmentationCapacity\" onclick=\"expand(Augmentation" + intId + "Edit)\"><input type=\"number\" id=\"Augmentation" + intId + "EditCapacity\" value=\"" + this.capacity + "\"></td>";
+			tmpstr	+=		"<td class=\"AugmentationEssence\" onclick=\"expand(Augmentation" + intId + "Edit)\">Ess<input type=\"number\" id=\"Augmentation" + intId + "EditEssence\" value=\"" + this.essence + "\"></td>";
+			tmpstr	+=		"<td class=\"AugmentationCapacity\" onclick=\"expand(Augmentation" + intId + "Edit)\">Cap<input type=\"number\" id=\"Augmentation" + intId + "EditCapacity\" value=\"" + this.capacity + "\"></td>";
 			//Dropdown Section
 			tmpstr	+=	"</tr><tr class=\"dropdownhidden\" id=\"Augmentation" + intId + "Editdropdown\"><td colspan=\"2\">";
-			tmpstr	+=		"Source:<input type=\"text\" id=\"Augmentation" + intId + "EditSource\" value=\"" + this.source + "\"></br>";
+			tmpstr	+=		"Source:<input type=\"text\" id=\"Augmentation" + intId + "EditSource\" value=\"" + this.source + "\" placeholder=\"Source\"></br>";
 			//Draw Augmentation Modifiers
-			tmpstr	+=		"<textarea cols=\"20\" rows=\"4\" id=\"Augmentation" + intId + "EditMods\">";
+			tmpstr	+=		"<textarea cols=\"20\" rows=\"4\" id=\"Augmentation" + intId + "EditMods\" placeholder=\"Modifications\">";
 			for (var i = 0; i < this.mods.length; i++) {
 				tmpstr	+= this.mods[i] + "\n"
 			}
 			tmpstr	+=		"</textarea></br>";
 			//Draw Notes
-			tmpstr	+=		"<textarea cols=\"20\" rows=\"4\" id=\"Augmentation" + intId + "EditNotes\">";
+			tmpstr	+=		"<textarea cols=\"20\" rows=\"4\" id=\"Augmentation" + intId + "EditNotes\" placeholder=\"Notes\">";
 			for (var i = 0; i < this.notes.length; i++) {
 				tmpstr	+= this.notes[i];
 				tmpstr	+=	(i != (this.notes.length - 1)) ? "\n" : "";
@@ -213,10 +213,10 @@ function Augmentation(intOwnerID, strName, intEssence, intCapacity, strArrNotes,
 		this.mods			= document.getElementById("Augmentation" + intId + "EditMods").value.split('\n');
 		this.notes			= document.getElementById("Augmentation" + intId + "EditNotes").value.split('\n');
 		this.source			= document.getElementById("Augmentation" + intId + "EditSource").value;
-		this.attributemods	= [];
-		this.skillmods		= [];
 		//Stat Modifiers
 		var tmpelem = document.getElementsByClassName("Augmentation" + intId + "EditAppliedModsModSlot");
+		this.attributemods	= [];
+		this.skillmods		= [];
 		for (var i = 0; i < tmpelem.length; i++) {
 			var tmparr = {};
 			console.log("Getting Augmentation " + intId + " Mod " + i );

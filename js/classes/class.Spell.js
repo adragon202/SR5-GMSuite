@@ -167,13 +167,13 @@ function Spell(intOwnerID, strName, strCategory, strArrEffects, strType, strRang
 		var tmpstr = "";
 			tmpstr	+=	"<table class=\"Spell\" id=\"Spell" + intId + "Edit\"><tbody><tr>";
 			tmpstr	+=			"<th class=\"SpellName\" onclick=\"expand(Spell" + intId + "Edit)\">"
-			tmpstr	+=			"<input type=\"text\" id=\"Spell" + intId + "EditName\" value=\"" + this.name + "\"></th>";
+			tmpstr	+=			"<input type=\"text\" id=\"Spell" + intId + "EditName\" value=\"" + this.name + "\" placeholder=\"Name\"></th>";
 			tmpstr	+=			"<td class=\"SpellCategory\" onclick=\"expand(Spell" + intId + "Edit)\">"
-			tmpstr	+=			"<input type=\"text\" id=\"Spell" + intId + "EditCategory\" value=\"" + this.category + "\"></td>";
+			tmpstr	+=			"<input type=\"text\" id=\"Spell" + intId + "EditCategory\" value=\"" + this.category + "\" placeholder=\"Category\"></td>";
 			//Drop Down Section
 			tmpstr	+=		"</tr><tr class=\"dropdownhidden\" id=\"Spell" + intId + "Editdropdown\"><td colspan=\"2\">";
 			tmpstr	+=			this.drawStatTableEdit(intId) + "</br>";
-			tmpstr	+=			"<textarea cols=\"40\" rows=\"4\" id=\"Spell" + intId + "EditNotes\">";
+			tmpstr	+=			"<textarea cols=\"40\" rows=\"4\" id=\"Spell" + intId + "EditNotes\" placeholder=\"Notes\">";
 			for (var i = 0; i < this.notes.length; i++) {
 				tmpstr	+=	this.notes[i];
 				tmpstr	+=	(i != (this.notes.length - 1)) ? "\n" : "";
@@ -198,7 +198,7 @@ function Spell(intOwnerID, strName, strCategory, strArrEffects, strType, strRang
 		var tmpstr = "";
 			tmpstr	+=	"<table class=\"SpellStats\"><tbody>"
 			tmpstr	+=		"<caption><strong>("
-			tmpstr	+=		"<textarea cols=\"15\" rows=\"2\" id=\"Spell" + intId + "EditEffects\">";
+			tmpstr	+=		"<textarea cols=\"15\" rows=\"2\" id=\"Spell" + intId + "EditEffects\" placeholder=\"Effects\">";
 			for (var i = 0; i < this.effects.length; i++) {
 				tmpstr += this.effects[i] + "\n";
 			}

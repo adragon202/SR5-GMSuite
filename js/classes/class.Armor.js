@@ -97,11 +97,11 @@ function Armor(intOwnerID, strName, intRating, strArrMods)
 	this.drawEdit		= function(intId){
 		var tmpstr	="<table class=\"ArmorEdit\" id=\"Armor" + intId + "\"><tbody><tr>";
 			tmpstr	+=	"<th class=\"GearName\" onclick=\"expand(Armor" + intId + ")\">";
-			tmpstr	+=	"<input type=\"text\" id=\"Armor" + intId + "EditName\" value=\"" + this.name + "\"</th>";
+			tmpstr	+=	"<input type=\"text\" id=\"Armor" + intId + "EditName\" value=\"" + this.name + "\" placeholder=\"Name\"></th>";
 			tmpstr	+=	"<td class=\"GearRating\">Armor:";
-			tmpstr	+=	"<input type=\"number\" id=\"Armor" + intId + "EditRating\" value=\"" + this.rating + "\"</td>";
+			tmpstr	+=	"<input type=\"number\" id=\"Armor" + intId + "EditRating\" value=\"" + this.rating + "\"></td>";
 			tmpstr	+=	"</tr><tr class=\"dropdownhidden\" id=\"Armor" + intId + "dropdown\"><td colspan=\"2\">";
-			tmpstr	+=		"<textarea cols=\"20\" rows=\"4\" id=\"Armor" + intId + "EditMods\">";
+			tmpstr	+=		"<textarea cols=\"20\" rows=\"4\" id=\"Armor" + intId + "EditMods\" placeholder=\"Modifications\">";
 			for (var i = 0; i < this.mods.length; i++) {
 				tmpstr	+= this.mods[i];
 				tmpstr	+=	(i != (this.mods.length - 1)) ? "\n" : "";

@@ -99,11 +99,11 @@ function Skill(intOwnerID, strName, boolDefault, intRating, strArrSpecs)
 	this.drawEdit 		= function(intId){
 		var tmpstr	="<table class=\"Skill\" id=\"Skill" + intId + "Edit\"><tbody><tr>";
 			tmpstr	+=	"<th class=\"SkillName\" onclick=\"expand(Skill" + intId + "Edit)\">";
-			tmpstr	+=	"<input class=\"SkillName\" list=\"skills\" id=\"Skill" + intId + "EditName\" value=\"" + this.name + "\">";
+			tmpstr	+=	"<input class=\"SkillName\" list=\"skills\" id=\"Skill" + intId + "EditName\" value=\"" + this.name + "\" placeholder=\"Name\">";
 			tmpstr	+=	"</th>";
 			tmpstr	+=	"<td class=\"SkillRating\"><input type=\"number\" id=\"Skill" + intId + "EditRating\" style=\"width:20px;\" value=\"" + this.rating + "\">/12</td>";
 			tmpstr	+=	"</tr><tr class=\"dropdownhidden\" id=\"Skill" + intId + "Editdropdown\"><td colspan=\"2\">";
-			tmpstr	+=	"<textarea cols=\"20\" rows=\"2\" id=\"Skill" + intId + "EditSpecializations\">";
+			tmpstr	+=	"<textarea cols=\"20\" rows=\"2\" id=\"Skill" + intId + "EditSpecializations\" placeholder=\"Specializations\">";
 			for (var i = 0; i < this.spec.length; i++) {
 				tmpstr	+=	this.spec[i];
 				tmpstr	+=	(i != (this.spec.length - 1)) ? "\n" : "";

@@ -128,12 +128,12 @@ function Power(intOwnerID, strName, intRating, strArrNotes, strSource, strArrAtt
 		var tmpstr	= "";
 			tmpstr	="<table class=\"Power\" id=\"Power" + intId + "Edit\"><tbody><tr>";
 			tmpstr	+=		"<th class=\"PowerName\" onclick=\"expand(Power" + intId + "Edit)\">";
-			tmpstr	+=		"<input type=\"text\" id=\"Power" + intId + "EditName\" value=\"" + this.name + "\"></th>";
+			tmpstr	+=		"<input type=\"text\" id=\"Power" + intId + "EditName\" value=\"" + this.name + "\" placeholder=\"Name\"></th>";
 			tmpstr	+=		"<td class=\"PowerRating\" onclick=\"expand(Power" + intId + "Edit)\"><input type=\"text\" id=\"Power" + intId + "EditRating\"" + this.rating + "></td>";
 			//Drop Down Section
 			tmpstr	+=	"</tr><tr class=\"dropdownhidden\" id=\"Power" + intId + "Editdropdown\"><td colspan=\"2\">";
-			tmpstr	+=		"Source: <input type\"text\" id=\"Power" + intId + "EditSource\" value=\"" + this.source + "\"></br>";
-			tmpstr	+=		"<textarea cols=\"20\" rows=\"4\" id=\"Power" + intId + "EditNotes\">";
+			tmpstr	+=		"Source: <input type\"text\" id=\"Power" + intId + "EditSource\" value=\"" + this.source + "\" placeholder=\"Source\"></br>";
+			tmpstr	+=		"<textarea cols=\"20\" rows=\"4\" id=\"Power" + intId + "EditNotes\" placeholder=\"Notes\">";
 			for (var i = 0; i < this.notes.length; i++) {
 				tmpstr	+=	this.notes[i];
 				tmpstr	+=	(i != (this.notes.length - 1)) ? "\n" : "";
@@ -191,6 +191,8 @@ function Power(intOwnerID, strName, intRating, strArrNotes, strSource, strArrAtt
 		this.source	= document.getElementById("Power" + intId + "EditSource").value;
 		//Stat Modifiers
 		var tmpelem = document.getElementsByClassName("Power" + intId + "EditAppliedMods" + "ModSlot");
+		this.attributemods	= [];
+		this.skillmods		= [];
 		for (var i = 0; i < tmpelem.length; i++) {
 			var tmparr = {};
 			tmparr["name"] = document.getElementById("Power" + intId + "EditAppliedMods" + i + "Name").value;

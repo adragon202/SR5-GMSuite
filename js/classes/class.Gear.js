@@ -190,6 +190,8 @@ function Gear(intOwnerID, strName, intValue, strArrNotes, strArrAttrMods, strArr
 		this.notes	= document.getElementById("Gear" + intId + "EditNotes").value.split('\n');
 		//Stat Modifiers
 		var tmpelem = document.getElementsByClassName("Gear" + intId + "EditAppliedMods" + "ModSlot");
+		this.attributemods	= []
+		this.skillmods		= []
 		for (var i = 0; i < tmpelem.length; i++) {
 			var tmparr = {};
 			tmparr["name"] = document.getElementById("Gear" + intId + "EditAppliedMods" + i + "Name").value;

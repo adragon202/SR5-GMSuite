@@ -102,18 +102,18 @@ function Weapon(intOwnerID, strName, strType, objStats, strArrMods, strArrNotes)
 		var tmpstr	= "";
 			tmpstr	+=	"<table class=\"WeaponEdit\" id=\"Weapon" + intId + "\"><tbody><tr>";
 			tmpstr	+=		"<th class=\"WeaponName\" onclick=\"expand(Weapon" + intId + ")\">";
-			tmpstr	+=		"<input type=\"text\" class=\"GearName\" id=\"Weapon" + intId + "EditName\" value=\"" + this.name + "\"></th>";
+			tmpstr	+=		"<input type=\"text\" id=\"Weapon" + intId + "EditName\" placeholder=\"Name\" value=\"" + this.name + "\"></th>";
 			tmpstr	+=		"<td class=\"WeaponType\">";
-			tmpstr	+=		"<input type=\"text\" class=\"GearValue\" id=\"Weapon" + intId + "EditType\" value=\"" + this.type + "\"></td>";
+			tmpstr	+=		"<input type=\"text\" id=\"Weapon" + intId + "EditType\" placeholder=\"Type\" value=\"" + this.type + "\"></td>";
 			tmpstr	+=		"</tr><tr class=\"dropdownhidden\" id=\"Weapon" + intId + "dropdown\"><td colspan=\"2\">";
 			tmpstr 	+=		this.stats.drawEdit(intId);
-			tmpstr	+=		"<textarea cols=\"20\" rows=\"4\" id=\"Weapon" + intId + "EditMods\">";
+			tmpstr	+=		"<textarea cols=\"20\" rows=\"4\" id=\"Weapon" + intId + "EditMods\" placeholder=\"Modifications\">";
 			for (var i = 0; i < this.mods.length; i++) {
 				tmpstr	+=	this.mods[i];
 				tmpstr	+=	(i != (this.mods.length - 1)) ? "\n" : "";
 			}
 			tmpstr	+=		"</textarea>"
-			tmpstr	+=		"<textarea cols=\"20\" rows=\"4\" id=\"Weapon" + intId + "EditNotes\">";
+			tmpstr	+=		"<textarea cols=\"20\" rows=\"4\" id=\"Weapon" + intId + "EditNotes\" placeholder=\"Notes\">";
 			for (var i = 0; i < this.notes.length; i++) {
 				tmpstr	+=	this.notes[i];
 				tmpstr	+=	(i != (this.notes.length - 1)) ? "\n" : "";
