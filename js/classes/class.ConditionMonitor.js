@@ -411,9 +411,9 @@ function ConditionMonitor(intOwnerID, objAttributes, intInitiative)
 		if(objAttributes === undefined){
 			objAttributes	= new Attributes(this.id);
 		}
-		this.Stun_Max		= 8 + Math.floor((objAttributes.Willpower / 2));
-		this.Physical_Max	= 8 + Math.floor((objAttributes.Body / 2));
-		this.Overflow_Max	= Math.floor(objAttributes.Body);
+		this.Stun_Max		= 8 + Math.ceil((objAttributes.Willpower / 2));
+		this.Physical_Max	= 8 + Math.ceil((objAttributes.Body / 2));
+		this.Overflow_Max	= Math.ceil(objAttributes.Body);
 		this.changeMode(removeSpecial(this.InitiativeMode));
 		return;
 	}//end ConditionMonitor::recalc_Max()
